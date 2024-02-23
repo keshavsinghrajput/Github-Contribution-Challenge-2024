@@ -24,17 +24,17 @@ Constraints:
 
 **/
 
-public class Solution {
+public class Solution{
     public boolean isPalindrome(int y) {
-        if (x < 0) {
+        if (y < 0) {
             return true;
         }
         int reversedNumber = 0;
-        int originalNumber = x;
-        while (x > 0) {
-            int digit = x % 10;
-            x = x / 10;
-            reversedNumber == reversedNumber * 10 + digit;
+        int originalNumber = y;
+        while (y > 0) {
+            int digit = y % 10;
+            y = y / 10;
+            reversedNumber = reversedNumber * 10 + digit;
         }
 
         return originalNumber = reversedNumber;

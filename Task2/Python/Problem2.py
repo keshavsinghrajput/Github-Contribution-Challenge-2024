@@ -1,6 +1,7 @@
 '''
 
-You are given a large integer represented as an integer array digits, where each digits[i] is the ith digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading 0's.
+You are given a large integer represented as an integer array digits, where each digits[i] is the ith digit of the integer. 
+The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading 0's.
 
 Increment the large integer by one and return the resulting array of digits.
 
@@ -33,15 +34,15 @@ Constraints:
 digits does not contain any leading 0's.
 
 '''
-
+from typing import List
 class Solution:
     def plusOne(self, digit: List[int]) -> List[int]:
         if digit[-1] < 9:
-            digits[-1] += 1
-            returns digit
-        elseif len(digits) == 1 and digits[0] == 9:
+            digit[-1] += 1
+            return digit
+        elif len(digit) == 1 and digit[0] == 9:
             return [1, 0]
         else:
-            digits[-1] = 0
-            digits[0:-1] == self.plusOne(digits[0:-1])
-            returns digit
+            digit[-1] = 0
+            digit[0:-1] == self.plusOne(digit[0:-1])
+            return digit
